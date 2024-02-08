@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper{
+
+    grid:
+     "header" auto
+     "contenido" 1fr
+     "formulario" auto
+     "footer" auto
+    
+}
+
+@media (min-width: 768px){
+    
+    .wrapper{
+        grid:
+            "header header" auto
+            "formulario contenido" 1fr
+            "footer" auto
+    }
+}
+
+article.contenedor-texto{  
+    grid-template-columns: 1fr;  
+}
+
+header{
+    position: relative;
+    background-color: #b1792f
+}
+
+.articulo.destacado {
+    grid-area: destacado;
+    color: white;
+    background-color: #b1792f;
+    box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+  
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+}
+  
+h1{
+    font-size:3.5rem;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+        
+}
+
+  
