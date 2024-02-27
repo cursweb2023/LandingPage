@@ -560,6 +560,10 @@ video {
   z-index: 10;
 }
 
+.m-7 {
+  margin: 1.75rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -592,20 +596,16 @@ video {
   width: 20rem;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .w-full {
   width: 100%;
 }
 
-.max-w-96 {
-  max-width: 24rem;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -618,6 +618,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
@@ -651,16 +655,6 @@ video {
   border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
-.bg-cyan-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -673,6 +667,10 @@ video {
 
 .p-16 {
   padding: 4rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-3 {
@@ -699,18 +697,8 @@ video {
   line-height: 2.25rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .font-bold {
   font-weight: 700;
-}
-
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .text-gray-800 {
@@ -747,44 +735,108 @@ video {
 
 .wrapper{
   grid:
-     "header" auto
-     "contenido" 1fr
-     "formulario" auto
-     "footer" auto
+    "header" auto
+    "contenido" auto
+    "formulario" auto
 }
 
-@media (min-width: 768px){
-  .wrapper{
-    grid:
-            "header header" auto
-            "formulario contenido" 1fr
-            "footer" auto
-  }
+.capriola-regular {
+  font-family: "Capriola", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .video{
+    position: relative;
+} */
+
+article{
+  /* margin-left: 5px; */
+  min-width: 524px;
 }
 
 article.contenedor-texto{
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
 }
 
 header{
-  position: relative;
-  background-color: #b1792f
+  grid-area: header;
+  background-color: #b1792f;
+}
+
+header img.logo{
+  width: auto;
+  height: 100%;
+  padding: 20px;
+}
+
+header h1{
+  font-size: clamp(2rem, 2.5vw, 3.5rem);
+}
+
+.formulario1{
+  grid-area:formulario;
+  width: 100%;
+  margin-top: 88px;
 }
 
 .articulo.destacado {
-  grid-area: destacado;
+  grid-area: contenido;
   color: white;
-  background-color: #b1792f;
-  box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  background-color: #23857A;
+  width: 50%;
+}
+
+.llamadaAccion{
+  height: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 h1{
   font-size:3.5rem;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+}
+
+button.w-full{
+  background-color:#23857A;
+}
+
+button.w-full:hover{
+  --tw-bg-opacity:1;
+  background-color:rgb(177, 121, 47);
+}
+
+.llamadaAccion a{
+  color: white;
+}
+
+.llamadaAccion a:hover{
+  color: #B1792F;
+}
+
+.iconos-sociales img{
+  transition:all 0.5s ease-out;
+}
+
+.iconos-sociales img:hover{
+  box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transform:translate(0px, -5px);
+}
+
+@media (min-width: 768px){
+  .wrapper{
+    grid:
+
+            "header header" auto
+            "contenido formulario" 1fr
+  }
+
+  .articulo.destacado{
+    width: 75%;
+  }
 }
 
 .hover\:bg-blue-700:hover {
@@ -792,9 +844,9 @@ h1{
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
-.hover\:text-blue-800:hover {
+.hover\:text-yellow-300:hover {
   --tw-text-opacity: 1;
-  color: rgb(30 64 175 / var(--tw-text-opacity));
+  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -802,4 +854,17 @@ h1{
   outline-offset: 2px;
 }
 
-  
+@media (min-width: 1024px) {
+  .lg\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .lg\:pt-2 {
+    padding-top: 0.5rem;
+  }
+
+  .lg\:pt-4 {
+    padding-top: 1rem;
+  }
+}
