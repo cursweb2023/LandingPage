@@ -5,52 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/output.css" />
     <link rel="icon" href="img/favicon.ico" type="img/ico" sizes="16x16" />
+
     <title>Excursioning</title>
   </head>
 
   <body>
-    <header>
-      <h1>CONÈIXER EL TEU PAÍS ÉS GENIAL</h1>
+    <header class="flex">
+      <img class="logo" src="img/hiking_grey-150x150.jpg" alt="" />
+      <h1 class="Titulo1 text-center m-7">CONÈIXER EL TEU PAÍS ÉS GENIAL</h1>
     </header>
-    <div class="wrapper grid overscroll-y-none">
+
+    <div class="wrapper grid grid-rows-2 overscroll-y-none">
       <video
         class="video fixed h-full w-full -z-10 object-cover"
         src="media/cataluna.mp4"
-        type="video/mp4"
         autoplay
         loop
         muted
       ></video>
-
-      <article
-        class="articulo destacado flex flex-row max-w-96 min-h-2 rounded-md"
-      >
-        <div class="contenedor-texto w-96 min-h-2">
-          <div>
-            <img
-              class="img_excursion"
-              src="img/hiking_grey-150x150.jpg"
-              alt=""
-            />
-            <br />
-            <h2 class="titol2 text-white text-3xl">
-              Vols conèixer les nostres excursions ?
-            </h2>
-            <br />
-            <h2 class="text-3x1">
-              Et convidem a realitzar excursions amb nosaltres per diferents
-              indrets de Catalunya. Podràs escollir entre diferents nivells de
-              dificultat.
-            </h2>
-            <br />
-            <a href="#" class="btn-link">A N I M A' T</a>
-            <img src="" alt="">
+      <!-- Artículo con la llamada a la acción -->
+      <article class="articulo destacado min-h-2 rounded-md">
+        <div class="contenedor-texto min-h-2 p-3">
+          <div class="imagenarticulo">
+            <img src="img/farmhouse.jpg" class="imgFarm lg:mx-32" alt="" />
           </div>
-        </div>
-      </article>
 
+          <h2 class="titol2 text-white text-3xl lg:pt-4 text-center">
+            Vols conèixer les nostres excursions ?
+          </h2>
+
+          <p class="text-3x1 lg:mx-32 lg:pt-4">
+            Et convidem a realitzar excursions amb nosaltres per diferents
+            indrets de Catalunya.
+          </p>
+          <p class="text-3x1 lg:mx-32 lg:pt-2">
+            Podràs escollir entre diferents nivells de dificultat.
+          </p>
+        </div>
+        <div class="llamadaAccion text-center font-bold">
+          <a href="#" class="capriola-regular hover:text-yellow-300"
+            >A N I M A' T !!!</a
+          >
+        </div>
+        <!-- </div> -->
+      </article>
       <!-- component Formulario-->
-      <div class=" min-h-40 flex items-center justify-center">
+      <div
+        class="formulario1 min-h-40 flex items-center justify-center"
+      >
         <div class="relative">
           <div
             id="form-container"
@@ -65,26 +67,33 @@
             <form class="space-y-5">
               <input
                 class="w-full h-12 border border-gray-800 px-3 rounded-lg"
-                placeholder="Correu electrònic"
-                id=""
-                name=""
+                placeholder="Nom"
+                id="Nom"
                 type="text"
               />
               <input
                 class="w-full h-12 border border-gray-800 px-3 rounded-lg"
-                placeholder="Password"
-                id=""
-                name=""
+                placeholder="Correu electrònic"
+                id="Correu"
                 type="password"
               />
               <button
-                class="w-full h-12 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                class="w-full h-12 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 Envia
               </button>
-              <a class="text-blue-500 hover:text-blue-800 text-sm" href="#"
-                >Contrasenya oblidada?</a
-              >
+              
+                <div class="iconos-sociales flex flex-row gap-4">
+                  <a href="https://www.youtube.com" target="_blank"><img loading="lazy" alt="Sígueme en YouTube" height="35" width="35" src="img/youtube.png" title=" Sígueme en YouTube "/></a>
+                  
+                  <a href="https://www.facebook.com" target="_blank"><img loading="lazy" alt="Sígueme en Facebook" height="35" width="35" src="img/facebook.png" title="Sígueme en Facebook"/></a>
+                  
+                  <a href="https://www.instagram.com" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="img/instagram.png" title="Sígueme en Instagram"/></a>
+                  
+                  <a href="https://www.twitter.com" target="_blank"><img loading="lazy" alt=" Sígueme en Twitter" height="35" width="35" src="img/twitter.png" title="Sígueme en Twitter"/></a>
+             
+                </div>
+      
             </form>
           </div>
         </div>
